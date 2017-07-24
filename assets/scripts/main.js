@@ -1,5 +1,5 @@
 /** import external dependencies */
-import 'jquery';
+// import 'jquery';
 // import 'bootstrap';
 
 /** import local dependencies */
@@ -24,5 +24,8 @@ import 'jquery';
 /** Load Events */
 // jQuery(document).ready(() => routes.loadEvents());
 jQuery(document).ready(() => {
-  console.log('working');
+  console.log('working 2');
+  const h1 = $('body').find('h1');
+  h1.css('color', 'blue');
+  console.log(h1);
 });

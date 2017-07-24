@@ -35,7 +35,7 @@
     "opera 12"
   ],
   "dependencies": {
-    "jquery": "1.12.4 - 3"
+    "@types/jquery": "^3.2.9"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.1",
