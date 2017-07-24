@@ -1,15 +1,13 @@
-const $ = jQuery;
-
 /**
  *
  * State for Products
  * ......................
- * 
+ *
  *
  * */
 
-interface IProductStore{
-  isOpen:boolean;
+interface IProductStore {
+  isOpen: boolean;
   currentIndex: number;
 }
 

@@ -1,25 +1,25 @@
-'use strict'; // eslint-disable-line
+'use strict' // eslint-disable-line
 
-const webpack = require('webpack');
-const merge = require('webpack-merge');
-const autoprefixer = require('autoprefixer');
-const CleanPlugin = require('clean-webpack-plugin');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
-const StyleLintPlugin = require('stylelint-webpack-plugin');
+const webpack = require('webpack')
+const merge = require('webpack-merge')
+const autoprefixer = require('autoprefixer')
+const CleanPlugin = require('clean-webpack-plugin')
+const ExtractTextPlugin = require('extract-text-webpack-plugin')
+const StyleLintPlugin = require('stylelint-webpack-plugin')
 
-const CopyGlobsPlugin = require('copy-globs-webpack-plugin');
-const config = require('./config');
+const CopyGlobsPlugin = require('copy-globs-webpack-plugin')
+const config = require('./config')
 
 const stripLoader = {
   test: /\.ts?$/,
   loader: 'strip-loader',
   query: {
-    strip: [ 'console.*' ]
+    strip: ['console.*']
   }
-};
+}
 
-const assetsFilenames = (config.enabled.cacheBusting) ? config.cacheBusting : '[name]';
-const sourceMapQueryStr = (config.enabled.sourceMaps) ? '+sourceMap' : '-sourceMap';
+const assetsFilenames = (config.enabled.cacheBusting) ? config.cacheBusting : '[name]'
+const sourceMapQueryStr = (config.enabled.sourceMaps) ? '+sourceMap' : '-sourceMap'
 
 let webpackConfig = {
   context: config.paths.assets,
@@ -56,7 +56,17 @@ let webpackConfig = {
           ],
         }),
       },
-      { test: /\.ts?$/, loaders: ['babel', 'ts-loader']},
+      {
+        enforce: 'pre',
+        test: /\.ts?$/,
+        include: config.paths.assets,
+        loader: 'tslint-loader',
+        options: {
+          typeCheck: true,
+          emitErrors: true,
+        },
+      },
+      { test: /\.ts?$/, loaders: ['babel', 'ts-loader'] },
       {
         test: /\.scss$/,
         include: config.paths.assets,
@@ -105,6 +115,7 @@ let webpackConfig = {
       'node_modules',
       'bower_components',
     ],
+    extensions: ['.js', '.jsx', '.ts', '.tsx'],
     enforceExtension: false,
   },
   resolveLoader: {
@@ -166,20 +177,21 @@ let webpackConfig = {
     //   syntax: 'scss',
     // }),
   ],
-};
+}
 
-/* eslint-disable global-require */ /** Let's only load dependencies as needed */
+/* eslint-disable global-require */
+/** Let's only load dependencies as needed */
 
 if (config.enabled.optimize) {
-  webpackConfig = merge(webpackConfig, require('./webpack.config.optimize'));
+  webpackConfig = merge(webpackConfig, require('./webpack.config.optimize'))
 }
 
 if (config.env.production) {
-  webpackConfig.plugins.push(new webpack.NoEmitOnErrorsPlugin());
+  webpackConfig.plugins.push(new webpack.NoEmitOnErrorsPlugin())
 }
 
 if (config.enabled.cacheBusting) {
-  const WebpackAssetsManifest = require('webpack-assets-manifest');
+  const WebpackAssetsManifest = require('webpack-assets-manifest')
 
   webpackConfig.plugins.push(
     new WebpackAssetsManifest({
@@ -189,12 +201,12 @@ if (config.enabled.cacheBusting) {
       assets: config.manifest,
       replacer: require('./util/assetManifestsFormatter'),
     })
-  );
+  )
 }
 
 if (config.enabled.watcher) {
-  webpackConfig.entry = require('./util/addHotMiddleware')(webpackConfig.entry);
-  webpackConfig = merge(webpackConfig, require('./webpack.config.watch'));
+  webpackConfig.entry = require('./util/addHotMiddleware')(webpackConfig.entry)
+  webpackConfig = merge(webpackConfig, require('./webpack.config.watch'))
 }
 
-module.exports = webpackConfig;
+module.exports = webpackConfig

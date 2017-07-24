@@ -6,22 +6,22 @@
  * replace the dash with an underscore when adding it to the object below.
  * ======================================================================== */
 
-import camelCase from './camelCase.ts';
+import camelCase from './camelCase';
 
 // The routing fires all common scripts, followed by the page specific scripts.
 // Add additional events for more control over timing e.g. a finalize event
 export default class Router {
-  routes:any;
-  
+  routes: any;
+
   constructor(routes: Object) {
     this.routes = routes;
   }
 
-  capitalizeFirstLetter(string:string) {
-    return string.charAt(0).toUpperCase() + string.slice(1);
+  capitalizeFirstLetter(stringArg: string) {
+    return stringArg.charAt(0).toUpperCase() + stringArg.slice(1);
   }
 
-  fire(route:any, fn = 'init', args? : any) {
+  fire(route: any, fn = 'init', args?: any) {
     const routeLow = this.capitalizeFirstLetter(route);
     const fire = routeLow !== '' && this.routes[routeLow] && typeof this.routes[routeLow][fn] === 'function';
 
@@ -30,10 +30,10 @@ export default class Router {
     }
   }
 
-  matchProps(item:string){
+  matchProps(item: string) {
 
-    for( let prop in this.routes ) {
-      if(item === prop.toLowerCase()){
+    for (let prop in this.routes) {
+      if (item === prop.toLowerCase()) {
         return item;
       }
     }
@@ -50,7 +50,7 @@ export default class Router {
       .replace(/-/g, '_')
       .split(/\s+/)
       .map(camelCase)
-      .filter( (item:string) => this.matchProps(item))
+      .filter((item) => this.matchProps(item))
       .forEach((className) => {
         this.fire(className);
         this.fire(className, 'finalize');

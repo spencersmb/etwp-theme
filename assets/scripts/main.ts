@@ -1,18 +1,20 @@
-import Router from './utils/router.ts';
-import Common from "./routes/Common.ts"
-import Home from "./routes/Home.ts"
-import Products from "./routes/Products.ts"
+import Router from './utils/router';
+import Common from './routes/Common'
+import Home from './routes/Home'
+import Products from './routes/Products'
 
 // import * as $ from '../../node_modules/jquery/dist/jquery'
 // import jquery = require('jquery');
 // const $ = jQuery;
 
-(function() {
-  interface iRoutes {
-    string:string
+(function () {
+  interface Iroutes {
+    string: string
   }
-  class App {
+
+  class EtApp {
     routes: any;
+
     constructor() {
 
       // Use this variable to set up the common and page specific functions. If you
@@ -25,22 +27,19 @@ import Products from "./routes/Products.ts"
     }
 
     init(): void {
-
       new Router(this.routes).loadEvents();
     }
 
   }
 
 
-  let bootstrap = new App();
+  let bootstrap = new EtApp();
 
-  //use window.load for now - dev site loads too fast and doc.ready doesnt work - but it works when not in dev env
-  $(window).load(function() {
-    console.log("Doc loaded");
+  // use window.load for now - dev site loads too fast and doc.ready doesnt work - but it works when not in dev env
+  $(window).load(function () {
+    console.log('Doc loaded');
     bootstrap.init();
   });
-
-  //test3
 
 })();
 

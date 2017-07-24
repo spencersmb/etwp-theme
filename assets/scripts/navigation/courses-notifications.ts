@@ -1,4 +1,3 @@
-import * as $ from "jquery";
 declare var TimelineLite: any;
 declare var TweenLite: any;
 declare var et2017_ajax_object: any;
@@ -9,7 +8,7 @@ class SearchNavComponent {
   trigger: JQuery;
   isOpen: boolean;
   nav: JQuery;
-  
+
   constructor() {
     this.container = $('.et2017-notify__container');
     this.trigger = $('.et2017-notify__trigger');
@@ -17,24 +16,24 @@ class SearchNavComponent {
     this.nav = $('#et2017-notify-nav').find('ul');
   }
 
-  toggleNotifyBtn(e: Event): void{
-    
+  toggleNotifyBtn(e: Event): void {
+
     // console.log("target: ", e.target);
     // console.log("Selector: ", document.querySelector('.fa-times'));
 
-    switch(this.isOpen){
+    switch (this.isOpen) {
 
       // if not open -> open
       case false:
         e.preventDefault();
         this.openNav();
         this.ajaxCall();
-      break;
+        break;
 
-      //IF OPEN
+      // IF OPEN
       case true:
 
-        switch(e.target){
+        switch (e.target) {
 
           // if open & target is X btn -> close
           case document.querySelector('.et2017-notify__trigger'):
@@ -59,37 +58,37 @@ class SearchNavComponent {
             this.closeNav();
             break;
 
-          //else do what the link wants
+          // else do what the link wants
           default:
             break;
 
         }
 
-      break;
+        break;
 
     }
 
   }
 
-  openNav(){
+  openNav() {
     this.nav.addClass('is-visible');
     this.container.addClass('et2017-notify--open');
     this.isOpen = !this.isOpen;
   }
 
-  closeNav(){
+  closeNav() {
     this.nav.removeClass('is-visible');
     this.container.removeClass('et2017-notify--open');
     this.isOpen = !this.isOpen;
   }
 
-  ajaxCall(){
+  ajaxCall() {
 
-    
-    if($('.et2017-notify__count').length > 0){
 
-      //php will handle setting the proper cookies
-      //et2017_ajax_object is set using localize_script in the etp-plugin Admin class
+    if ($('.et2017-notify__count').length > 0) {
+
+      // php will handle setting the proper cookies
+      // et2017_ajax_object is set using localize_script in the etp-plugin Admin class
       $.post(et2017_ajax_object.ajaxurl, {
         action: 'etp_notify_refresh',
         nonce: et2017_ajax_object.ajax_nonce
@@ -98,22 +97,22 @@ class SearchNavComponent {
         // convert the response as a JSON Object instead of a string
         let server: any = JSON.parse(response);
 
-        if(server.data === 'success'){
-          //on success hide the bubble
+        if (server.data === 'success') {
+          // on success hide the bubble
           $('.et2017-notify__count').remove();
         }
 
-      }	)
-      .fail(function(response) {
-        alert('Error: ' + response.responseText);
-      });
+      })
+        .fail(function (response) {
+          alert('Error: ' + response.responseText);
+        });
 
     }
 
   }
-  
+
   init(): void {
-    $('#et2017-notify').on("click", this.toggleNotifyBtn.bind(this));
+    $('#et2017-notify').on('click', this.toggleNotifyBtn.bind(this));
   }
 }
 

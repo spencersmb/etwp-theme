@@ -1,25 +1,21 @@
-const $ = jQuery;
-
 /**
  *
  * INTERFACE FOR DATA COMING FROM PHP
  * ......................
  * */
-interface fontPHPData {
+interface FontPHPData {
   placeholder: string;
   name: string;
   styles: string[];
 }
 
-/** 
- * 
+/**
+ *
  * Font Preview Component
  * ......................
- * Connects to React component using dispatch event trigger 
- * 
+ * Connects to React component using dispatch event trigger
+ *
  * */
-  
-  
 class ProductsFontPreviewComponent {
   fontPreviewArray: any;
   event: CustomEvent;
@@ -27,24 +23,24 @@ class ProductsFontPreviewComponent {
   isOpen: Boolean;
 
   constructor() {
-    this.fontPreviewArray = $(".et-font-preview__link");
+    this.fontPreviewArray = $('.et-font-preview__link');
     this.app = $('#app');
   }
 
   addButtonClick() {
-    this.fontPreviewArray.each(( index:number, el:Element ) => {
+    this.fontPreviewArray.each((index: number, el: Element) => {
       let elIndex = index;
-      $(el).on("click", this.buttonClick.bind(this));
+      $(el).on('click', this.buttonClick.bind(this));
     });
   }
 
   createEvent() {
-    //Modern Browser way to call event ie11 and above
+    // Modern Browser way to call event ie11 and above
     // this.event = new CustomEvent(
-    //   "fontCheck",
+    //   'fontCheck',
     //   {
     //     detail: {
-    //       message: "Font Component up!",
+    //       message: 'Font Component up!',
     //       time: new Date(),
     //     },
     //     bubbles: true,
@@ -52,34 +48,34 @@ class ProductsFontPreviewComponent {
     //   }
     // );
 
-    this.event = document.createEvent("CustomEvent");
+    this.event = document.createEvent('CustomEvent');
     this.event.initCustomEvent('fontCheck', false, false, {
-        message: "Font Component up!",
-        time: new Date(),
+      message: 'Font Component up!',
+      time: new Date(),
     });
 
 
   }
 
-  setData( data:fontPHPData ) {
+  setData(data: FontPHPData) {
     this.app.attr({
-      "data-placeholder": data.placeholder,
-      "data-name": data.name,
-      "data-styles": data.styles
+      'data-placeholder': data.placeholder,
+      'data-name': data.name,
+      'data-styles': data.styles
     });
   }
 
-  buttonClick( e:Event ) {
+  buttonClick(e: Event) {
     e.preventDefault();
-    console.log("font button click");
+    console.log('font button click');
     // Build font attr
     let element = $(e.currentTarget);
-    let name = element.data("name");
+    let name = element.data('name');
 
     let data = {
-      placeholder: name + " preview",
+      placeholder: name + ' preview',
       name: name,
-      styles: element.data("styles").split(',')
+      styles: element.data('styles').split(',')
     };
 
     // pass new data into react app
@@ -94,15 +90,15 @@ class ProductsFontPreviewComponent {
   }
 
   open() {
-    if ( this.isOpen ) {
+    if (this.isOpen) {
       return;
     } else {
-      this.app.addClass("open");
+      this.app.addClass('open');
     }
   }
 
   close() {
-    this.app.removeClass("open");
+    this.app.removeClass('open');
   }
 
   init(): void {
@@ -110,9 +106,9 @@ class ProductsFontPreviewComponent {
     this.createEvent();
     this.addButtonClick();
 
-    //delay showing the app for just a sec for safari fix
-    setTimeout(()=>{
-      console.log("Font Preview loaded");
+    // delay showing the app for just a sec for safari fix
+    setTimeout(() => {
+      console.log('Font Preview loaded');
       $('#app').addClass('loaded');
     }, 100);
   }

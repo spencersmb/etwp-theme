@@ -1,12 +1,13 @@
-import Search from './nav-search-pop-up.ts';
-import CoursesNotification from './courses-notifications.ts';
+import Search from './nav-search-pop-up';
+import CoursesNotification from './courses-notifications';
 import jquery = require('jquery');
+
 const $ = jquery;
 
 class NavComponent {
 
-  storeIcon: JQuery; //Jquery type
-  currentPosition: number; //type number with jquery
+  storeIcon: JQuery;
+  currentPosition: number;
 
   constructor() {
 
@@ -17,7 +18,7 @@ class NavComponent {
 
   checkStore() {
     this.currentPosition = $(window).scrollTop();
-    if ( this.currentPosition < 200 ) {
+    if (this.currentPosition < 200) {
       // remove hidden
       this.storeIcon.removeClass('store-hidden');
     } else {
@@ -28,7 +29,7 @@ class NavComponent {
   }
 
   init(): void {
-    console.log("Nav loaded");
+    console.log('Nav loaded');
     Search.init();
     CoursesNotification.init();
 
