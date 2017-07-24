@@ -85,15 +85,15 @@
     left: 50%;
     right: auto;
     top: 50%;
-    @include transform(translateX(-50%) translateY(-50%));
+    transform: translateX(-50%) translateY(-50%);
   } @else if $xy == x {
     left: 50%;
     right: auto;
-    @include transform(translateX(-50%));
+    transform: translateX(-50%);
   } @else if $xy == y {
     bottom: auto;
     top: 50%;
-    @include transform(translateY(-50%));
+    transform: translateY(-50%);
   }
 }
 

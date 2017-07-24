@@ -2,29 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d99a3e90-6055-40f0-8218-98d68cd0ccc4" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/build/webpack.config.js" afterPath="$PROJECT_DIR$/assets/build/webpack.config.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/scripts/interfaces/bps.interface.ts" afterPath="$PROJECT_DIR$/assets/scripts/interfaces/bps.interface.ts" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/scripts/main.ts" afterPath="$PROJECT_DIR$/assets/scripts/main.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/scripts/navigation/courses-notifications.ts" afterPath="$PROJECT_DIR$/assets/scripts/navigation/courses-notifications.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/scripts/navigation/nav-search-pop-up.ts" afterPath="$PROJECT_DIR$/assets/scripts/navigation/nav-search-pop-up.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/scripts/navigation/navigation.ts" afterPath="$PROJECT_DIR$/assets/scripts/navigation/navigation.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/scripts/partials/et-ck-forms.ts" afterPath="$PROJECT_DIR$/assets/scripts/partials/et-ck-forms.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/scripts/partials/search.ts" afterPath="$PROJECT_DIR$/assets/scripts/partials/search.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/scripts/partials/utils.ts" afterPath="$PROJECT_DIR$/assets/scripts/partials/utils.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/scripts/products/font-preview.ts" afterPath="$PROJECT_DIR$/assets/scripts/products/font-preview.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/scripts/products/product-select.ts" afterPath="$PROJECT_DIR$/assets/scripts/products/product-select.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/scripts/products/productStore.ts" afterPath="$PROJECT_DIR$/assets/scripts/products/productStore.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/scripts/products/products-license.ts" afterPath="$PROJECT_DIR$/assets/scripts/products/products-license.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/scripts/products/products-main.ts" afterPath="$PROJECT_DIR$/assets/scripts/products/products-main.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/scripts/products/products-modals.ts" afterPath="$PROJECT_DIR$/assets/scripts/products/products-modals.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/scripts/routes/Common.ts" afterPath="$PROJECT_DIR$/assets/scripts/routes/Common.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/scripts/routes/Home.ts" afterPath="$PROJECT_DIR$/assets/scripts/routes/Home.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/scripts/routes/Products.ts" afterPath="$PROJECT_DIR$/assets/scripts/routes/Products.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/scripts/utils/browserCheck.ts" afterPath="$PROJECT_DIR$/assets/scripts/utils/browserCheck.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/scripts/utils/camelCase.ts" afterPath="$PROJECT_DIR$/assets/scripts/utils/camelCase.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/scripts/utils/router.ts" afterPath="$PROJECT_DIR$/assets/scripts/utils/router.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/scripts/utils/utilities.ts" afterPath="$PROJECT_DIR$/assets/scripts/utils/utilities.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tslint.json" afterPath="$PROJECT_DIR$/tslint.json" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -48,11 +26,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="main.ts" pinned="false" current-in-tab="false">
+      <file leaf-file-name="main.ts" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/assets/scripts/main.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
-              <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+            <state relative-caret-position="260">
+              <caret line="10" column="52" lean-forward="false" selection-start-line="10" selection-start-column="52" selection-end-line="10" selection-end-column="52" />
               <folding>
                 <element signature="e#0#36#0" expanded="true" />
               </folding>
@@ -60,10 +38,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="products-license.ts" pinned="false" current-in-tab="true">
+      <file leaf-file-name="products-license.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/scripts/products/products-license.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="304">
+            <state relative-caret-position="624">
               <caret line="25" column="9" lean-forward="false" selection-start-line="25" selection-start-column="9" selection-end-line="25" selection-end-column="9" />
               <folding />
             </state>
@@ -146,8 +124,8 @@
         <option value="$PROJECT_DIR$/assets/scripts/routes/Common.ts" />
         <option value="$PROJECT_DIR$/assets/scripts/utils/router.ts" />
         <option value="$PROJECT_DIR$/assets/build/webpack.config.js" />
-        <option value="$PROJECT_DIR$/assets/scripts/main.ts" />
         <option value="$PROJECT_DIR$/assets/scripts/products/products-license.ts" />
+        <option value="$PROJECT_DIR$/assets/scripts/main.ts" />
       </list>
     </option>
   </component>
@@ -170,7 +148,7 @@
     <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="435" />
+    <option name="x" value="437" />
     <option name="y" value="23" />
     <option name="width" value="2121" />
     <option name="height" value="827" />
@@ -215,32 +193,6 @@
               <item name="assets" type="462c0819:PsiDirectoryNode" />
               <item name="scripts" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="et2017_sage" type="b2602c69:ProjectViewProjectNode" />
-              <item name="et2017_sage" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="scripts" type="462c0819:PsiDirectoryNode" />
-              <item name="interfaces" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="et2017_sage" type="b2602c69:ProjectViewProjectNode" />
-              <item name="et2017_sage" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="scripts" type="462c0819:PsiDirectoryNode" />
-              <item name="products" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="et2017_sage" type="b2602c69:ProjectViewProjectNode" />
-              <item name="et2017_sage" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="scripts" type="462c0819:PsiDirectoryNode" />
-              <item name="routes" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="et2017_sage" type="b2602c69:ProjectViewProjectNode" />
-              <item name="et2017_sage" type="462c0819:PsiDirectoryNode" />
-              <item name="dist" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -284,15 +236,15 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1500907845769</updated>
-      <workItem from="1500907847034" duration="3609000" />
+      <workItem from="1500907847034" duration="4345000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3609000" />
+    <option name="totallyTimeSpent" value="4345000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="435" y="23" width="2121" height="827" extended-state="0" />
+    <frame x="437" y="23" width="2121" height="827" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -535,21 +487,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/scripts/main.ts">
+    <entry file="file://$PROJECT_DIR$/assets/scripts/products/products-license.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#36#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="624">
+          <caret line="25" column="9" lean-forward="false" selection-start-line="25" selection-start-column="9" selection-end-line="25" selection-end-column="9" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/scripts/products/products-license.ts">
+    <entry file="file://$PROJECT_DIR$/assets/scripts/main.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="25" column="9" lean-forward="false" selection-start-line="25" selection-start-column="9" selection-end-line="25" selection-end-column="9" />
-          <folding />
+        <state relative-caret-position="260">
+          <caret line="10" column="52" lean-forward="false" selection-start-line="10" selection-start-column="52" selection-end-line="10" selection-end-column="52" />
+          <folding>
+            <element signature="e#0#36#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

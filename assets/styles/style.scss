@@ -29,25 +29,21 @@ Template: readanddigest
 @import 'core/variables';
 @import 'core/helpers';
 
-h1{
-  color:red;
-}
 
-//
-///* ----------------------------------------------------------------------------
-// * Structure
-// * ------------------------------------------------------------------------- */
-//@import 'core/structure';
-//@import 'core/flex-grid';
-//@import 'core/buttons';
-//
-///* WPCore */
-////@import 'core/wpcore';
-//
-///* ----------------------------------------------------------------------------
-// * Modules
-// * ------------------------------------------------------------------------- */
-//@import 'modules/navigation';
+/* ----------------------------------------------------------------------------
+ * Structure
+ * ------------------------------------------------------------------------- */
+@import 'core/structure';
+@import 'core/flex-grid';
+@import 'core/buttons';
+
+/* WPCore */
+//@import 'core/wpcore';
+
+/* ----------------------------------------------------------------------------
+ * Modules
+ * ------------------------------------------------------------------------- */
+@import 'modules/navigation';
 //@import 'modules/et-large-search';
 //@import 'modules/slider';
 //@import 'modules/feature-blog';

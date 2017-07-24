@@ -3,9 +3,13 @@ import Common from './routes/Common'
 import Home from './routes/Home'
 import Products from './routes/Products'
 
-// import * as $ from '../../node_modules/jquery/dist/jquery'
-// import jquery = require('jquery');
-// const $ = jQuery;
+/*
+ Notes for using TS:
+  - Removed Jquery addon in Webpack
+  - Using typings with TS instead of @types due to IDE outdated
+  - Had to install tslint globally and typescript
+  - If you cant find Typescipt - npm link typescript
+ */
 
 (function () {
   interface Iroutes {

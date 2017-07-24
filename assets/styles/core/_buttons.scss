@@ -5,7 +5,7 @@
   min-width: 158px;
   font-size: .8em;
   line-height: 3.5em;
-  @include transition(color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out);
+  transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out;
 
   &:after{
     content: '';
@@ -16,8 +16,8 @@
     top: 7px;
     right: -15px;
     display: block;
-    @include transform(rotate(45deg));
-    @include transition(color .15s ease-in-out, background-color .15s ease-in-out,border-color .15s ease-in-out);
+    transform: rotate(45deg);
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out;
   }
 
   &:hover {
@@ -41,7 +41,7 @@
   padding: 15px 40px;
   max-width: 125px;
   cursor: pointer;
-  @include transition(color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out);
+  transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out;
 
   &:hover{
     color:$white;
@@ -246,10 +246,10 @@
   }
 
   &:before{
-    @include transform(translateX(-50%)translateY(-50%)rotate(-45deg))
+    transform: translateX(-50%)translateY(-50%)rotate(-45deg);
   }
   &:after{
-    @include transform(translateX(-50%)translateY(-50%)rotate(45deg))
+    transform: translateX(-50%)translateY(-50%)rotate(45deg);
   }
 }
 
@@ -267,7 +267,7 @@
   text-transform: uppercase;
   font-weight: 600;
   font-size: 13px;
-  @include transition(all .3s);
+  transition: all .3s;
   cursor: pointer;
 
   &:hover{

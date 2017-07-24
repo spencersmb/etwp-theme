@@ -56,7 +56,11 @@ body.page-template-page-products .eltdf-content{
 
 // fix for nav on safari
 .eltdf-page-header .eltdf-sticky-header.header-appear{
-  @include transform(translateY(0));
+  -webkit-transform: translateY(0);
+  -moz-transform: translateY(0);
+  -ms-transform: translateY(0);
+  -o-transform: translateY(0);
+  transform: translateY(0);
 }
 
 p{
@@ -167,7 +171,11 @@ p{
 //Added opactiy transition for pinit animation
 a{
   img{
-    @include transition(opacity .3s);
+    -webkit-transition: opacity .3s;
+    -moz-transition: opacity .3s;
+    -ms-transition: opacity .3s;
+    -o-transition: opacity .3s;
+    transition: opacity .3s;
   }
 }
 
@@ -175,7 +183,7 @@ a{
 #eltdf-back-to-top>span i{
   position: absolute;
   top: 40%;
-  @include transform(translateY(-50%));
+  transform: translateY(-50%);
 }
 
 //Related blog posts
