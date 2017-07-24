@@ -5,8 +5,8 @@ const $ = jquery;
 
 class NavComponent {
 
-  storeIcon: any; //Jquery type
-  currentPosition: any; //type number with jquery
+  storeIcon: JQuery; //Jquery type
+  currentPosition: number; //type number with jquery
 
   constructor() {
 

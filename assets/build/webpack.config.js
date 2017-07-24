@@ -10,6 +10,14 @@ const StyleLintPlugin = require('stylelint-webpack-plugin');
 const CopyGlobsPlugin = require('copy-globs-webpack-plugin');
 const config = require('./config');
 
+const stripLoader = {
+  test: /\.ts?$/,
+  loader: 'strip-loader',
+  query: {
+    strip: [ 'console.*' ]
+  }
+};
+
 const assetsFilenames = (config.enabled.cacheBusting) ? config.cacheBusting : '[name]';
 const sourceMapQueryStr = (config.enabled.sourceMaps) ? '+sourceMap' : '-sourceMap';
 
@@ -48,6 +56,7 @@ let webpackConfig = {
           ],
         }),
       },
+      { test: /\.ts?$/, loaders: ['babel', 'ts-loader']},
       {
         test: /\.scss$/,
         include: config.paths.assets,

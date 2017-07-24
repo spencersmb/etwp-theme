@@ -26,9 +26,9 @@ class ProductsModalsClass {
   licenseData: any;
 
   licenseModal: any;
-  licenseModalBody: any; // JQUERY item
-  licenseModalBtn: any; // JQUERY item
-  lic_modal_tabContent: any; // JQUERY item
+  licenseModalBody: JQuery;
+  licenseModalBtn: JQuery;
+  lic_modal_tabContent: JQuery;
   localVariable: string;
 
   constructor() {
@@ -272,7 +272,7 @@ class ProductsModalsClass {
 
   asyncDataCall() {
 
-    return new Promise( ( resolve:any ) => {
+    return new Promise( ( resolve:any, reject?: any ) => {
 
       let urlString = this.window.et_products.url + '/wp-json/product-licenses/v1/license';
 
@@ -318,7 +318,7 @@ class ProductsModalsClass {
               //resolve promise data
               resolve(data);
             })
-            // .fail((status:string, err: any) => reject(status + err.message));
+            .fail((status:string, err: any) => reject(status + err.message));
 
         }
 
@@ -338,7 +338,7 @@ class ProductsModalsClass {
             //resolve promise data
             resolve(data);
           })
-          // .fail((status: string, err: any) => reject(status + err.message));
+          .fail((status: string, err: any) => reject(status + err.message));
       }
     });
   }

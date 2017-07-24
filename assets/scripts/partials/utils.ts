@@ -1,7 +1,6 @@
 import {BpsInterface} from "../interfaces/bps.interface.ts";
 import BrowserCheck from "../utils/browserCheck.ts"
-import jquery = require('jquery');
-const $ = jquery;
+
 
 class UtilityComponent {
   windowWidth: number;
@@ -96,7 +95,7 @@ class UtilityComponent {
     // create full array for image compression ref
     this.breakpoints = this._setBreakpoints(this.bps);
 
-    // $(window).on("resize", this._checkBreakpoint).bind(this);
+    $(window).on("resize", this._checkBreakpoint).bind(this);
   }
 
 }
