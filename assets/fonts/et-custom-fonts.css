@@ -91,3 +91,16 @@
 .magnolia{
     font-family: 'miss-magnolia';
 }
+
+@font-face {
+    font-family: 'cornerbakery';
+    src: url('../fonts/cornerbakery/CornerBakery-Regular.eot'),
+    url('../fonts/cornerbakery/CornerBakery-Regular.woff2') format('woff2'),
+    url('../fonts/cornerbakery/CornerBakery-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.corner{
+    font-family: 'cornerbakery';
+}

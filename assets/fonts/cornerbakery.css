@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'cornerbakery';
+    src: url('cornerbakery/CornerBakery-Regular.eot'),
+    url('cornerbakery/CornerBakery-Regular.woff2') format('woff2'),
+    url('cornerbakery/CornerBakery-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.corner{
+    font-family: 'cornerbakery';
+}
