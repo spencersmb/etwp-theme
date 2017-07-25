@@ -11,8 +11,8 @@
   float: none;
   position: relative;
   overflow: visible;
-  @include transition( all .3s);
-  @include transform(translate3d(0,0,0));
+  transition: all .3s;
+  transform: translate3d(0,0,0);
   background: url('./assets/images/confetti-clear.png') top center no-repeat;
   -webkit-box-shadow: 0px 18px 70px -19px rgba(0, 0, 0, 0.3);
   -moz-box-shadow: 0px 18px 70px -19px rgba(0, 0, 0, 0.3);
@@ -36,7 +36,7 @@
 
   @include breakpoint(laptop){
     &:hover{
-      @include transform(translate3d(0,-10px,0));
+      transform: translate3d(0,-10px,0);
     }
   }
 
@@ -46,11 +46,10 @@
   text-align: center;
   z-index: $above-content;
   position: relative;
-  @include transform(translateZ(0));
-  @include transition( all .3s);
-  padding:3rem 2rem 1.5rem;
+  transform: translateZ(0);
+  transition: all .3s;
+  padding: 3rem 2rem 1.5rem;
   margin: 15px;
-
 
   ul{
     padding-bottom: 5rem;
@@ -69,7 +68,7 @@
       position: absolute;
       left: 0;
       top: 50%;
-      @include transform(translateY(-50%));
+      transform: translateY(-50%);
       color: $primary-color;
     }
   }

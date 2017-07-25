@@ -11,6 +11,7 @@
   .et-box{
     z-index: 2;
     max-width: 500px;
+
     @include breakpoint(desktop){
       max-width: 600px;
     }
@@ -38,10 +39,10 @@
   max-width: 750px;
   position: absolute;
   top: 47px;
-  @include transform-origin(50% 50%);
+  transform-origin: 50% 50%;
 
   right: -15%;
-  @include transform(rotate(-12deg)translateX(40px));
+  transform: rotate(-12deg)translateX(40px);
 
   @media only screen and (max-width: 767px){
     display: none;
@@ -51,25 +52,25 @@
     display: block;
     right: -76%;
     top: -26px;
-    @include transform(rotate(0deg)translateX(40px));
+    transform: rotate(0deg)translateX(40px);
   }
 
   @media only screen and (min-width: 992px){
     display: block;
     right: -58%;
-    @include transform(rotate(-2deg)translateX(-70px));
+    transform: rotate(-2deg)translateX(-70px);
   }
 
   @media only screen and (min-width: 1025px){
     display: block;
     right: -34%;
     top: 0;
-    @include transform(rotate(-12deg) translateX(-70px));
+    transform: rotate(-12deg) translateX(-70px);
   }
 
   @include breakpoint(desktop){
     right: -8%;
-    @include transform(rotate(-12deg)translateX(40px));
+    transform: rotate(-12deg)translateX(40px);
   }
 
   img{
@@ -114,14 +115,15 @@
     max-width: 320px;
     top:-100px;
     position: relative;
-    @include transform(rotate(-20deg));
+    transform: rotate(-20deg);
   }
 
   .design-card{
     max-width: 475px;
     position: relative;
     width:70%;
-    @include transform(rotate(-20deg));
+    transform: rotate(-20deg);
+
     @include breakpoint(tablet){
       margin-top:60px;
       right: -100px;

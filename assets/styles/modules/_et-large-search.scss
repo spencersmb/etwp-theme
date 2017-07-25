@@ -25,8 +25,6 @@
   .eltdf-search-menu-holder {
     display: inline-block;
     width: 90%;
-    //background-color: rgba(80, 80, 80, 0.08);
-    //border: 1px solid rgba(137, 141, 144, 0.24);
     padding: 10px;
     border-radius: 50px;
     overflow: visible;
@@ -69,7 +67,7 @@
     display: block;
     position: absolute;
     top: 49%;
-    @include transform(translateY(-50%));
+    transform: translateY(-50%);
     right: 9px;
     width: auto;
   }
@@ -88,7 +86,7 @@
     -webkit-box-shadow: 0px 18px 44px -17px rgba(0, 0, 0, 0.6);
     -moz-box-shadow: 0px 18px 44px -17px rgba(0, 0, 0, 0.6);
     box-shadow: 0px 18px 44px -17px rgba(0, 0, 0, 0.6);
-    @include transition(all .3s);
+    transition: all .3s;
     border-top: #fff;
 
     @include breakpoint(desktop){
@@ -120,7 +118,7 @@
   }
 
   .ion-ios-search{
-    @include transition(color .15s ease-in-out);
+    transition: color .15s ease-in-out;
     color: $dark-blue;
     &:before {
       font-family: "FontAwesome";

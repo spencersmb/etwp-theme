@@ -16,7 +16,7 @@
   @include breakpoint(tablet){
     margin-right: 40px;
     padding-bottom: 0;
-    flex:0 0 64.75%;
+    flex: 0 0 64.75%;
   }
 
   @include breakpoint(laptop){
@@ -29,9 +29,9 @@
 
     @include breakpoint(tablet){
       position: absolute;
-      top:0;
+      top: 0;
       left: 0;
-      @include transform(scale3d(1.2,1.2,1.2));
+      transform: scale3d(1.2,1.2,1.2);
       width: 100%;
     }
   }
@@ -48,7 +48,6 @@
 
   .et-gallery-siderbar__item{
     @include first(1){
-      // padding-bottom: 40px;
     }
   }
 }

@@ -125,18 +125,18 @@ footer .widget:not(:last-child){
   li{
     list-style: none;
     line-height: 12px;
-    //display: block;
-    //margin: 0 auto;
   }
+
   h6{
     font-size: 14px;
   }
+
   a{
     font-size: 12px;
     font-weight: 500;
     color: #95989A;
     text-transform: uppercase;
-    @include transition(all .3s);
+    transition: all .3s;
     display: inline-block;
     margin-bottom: 10px;
     &:hover{
@@ -147,7 +147,7 @@ footer .widget:not(:last-child){
   a.eltdf-social-icon-widget-holder {
     background-color: $blue;
     border-radius: 50%;
-    @include transition(background-color 0.1s ease-out, border-color 0.1s ease-out);
+    transition: background-color 0.1s ease-out, border-color 0.1s ease-out;
     text-align: center;
     width: 27px;
     height: 27px;
@@ -195,6 +195,3 @@ footer .widget:not(:last-child){
     padding-left: 30px;
   }
 }
-
-
-

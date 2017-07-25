@@ -7,8 +7,8 @@
 
 .et-biocard{
   border-top: 15px solid $yellow;
-  background:$white;
-  margin:0 auto 30px;
+  background: $white;
+  margin: 0 auto 30px;
   padding: 45px 30px;
   display: flex;
   flex-direction: column;
@@ -19,17 +19,17 @@
   min-height: 300px;
   max-width: 300px;
 
-  @include transition(all .3s);
-  @include transform(translate3d(0, 0, 0));
+  transition: all .3s;
+  transform: translate3d(0, 0, 0);
 
   @include breakpoint(laptop){
-    margin:0 15px 30px;
+    margin: 0 15px 30px;
     max-width: none;
   }
 
   @include e(image){
-    @include transition(all .3s);
-    @include transform(scale(1) translate3d(0, 0, 0));
+    transition: all .3s;
+    transform: scale(1) translate3d(0, 0, 0);
     width: 200px;
     height: 200px;
     background-color: $light-grey;
@@ -39,8 +39,8 @@
   }
 
   @include e(content){
-    @include transform(translate3d(0, 0, 0));
-    @include transition(transform .3s);
+    transform: translate3d(0, 0, 0);
+    transition: transform .3s;
     text-align: center;
 
     h3{
@@ -59,8 +59,8 @@
   }
 
   @include e(divider){
-    @include transform(translate3d(0, 0, 0));
-    @include transition(transform .3s);
+    transform: translate3d(0, 0, 0);
+    transition: transform .3s;
     width: 150px;
     height: 10px;
     padding: 20px 0;
@@ -70,6 +70,5 @@
     text-align: center;
     padding: 15px 0;
   }
-
 
 }

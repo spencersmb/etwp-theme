@@ -22,7 +22,7 @@
     top: auto;
     right: auto;
     left: 50%;
-    @include transform(translateX(-50%));
+    transform: translateX(-50%);
 
     @include breakpoint(laptop){
       display: none;
@@ -55,15 +55,15 @@
     position: relative;
     cursor: pointer;
     box-shadow: 0px 2px 6px 1px rgba(0, 0, 0, 0.2);
-    @include transition(all .3s ease-in-out);
-    @include transform(translate3d(0, 0, 0));
+    transition: all .3s ease-in-out;
+    transform: translate3d(0, 0, 0);
 
     &:hover{
-      @include transform(translate3d(0,-5px, 0));
+      transform: translate3d(0,-5px, 0);
       box-shadow: 0px 20px 45px -6px rgba(0, 0, 0, 0.2);
 
       .eltdf-image-link{
-        @include transition(opacity .15s);
+        transition: opacity .15s;
         &::after{
           opacity: 1;
         }
@@ -81,7 +81,8 @@
     padding: 25px 0;
   }
   .eltdf-pt-one-title-holder{
-   margin:0 auto;
+    margin: 0 auto;
+
     .eltdf-pt-one-title{
       padding: 0 20px;
       display: flex;
@@ -113,7 +114,7 @@
     bottom: -11px;
     z-index: 1;
     left: 50%;
-    @include transform(translateX(-50%));
+    transform: translateX(-50%);
     padding: 6px 12px;
     border-radius: 25px;
 

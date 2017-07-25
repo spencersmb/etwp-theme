@@ -5,11 +5,11 @@
 #et_youtubeModal, #licenseModal{
 
   &.modal.in .modal-dialog{
-    @include transform(translate3d(0, 100px, 0));
+    transform: translate3d(0, 100px, 0);
   }
 
   &.modal.fade .modal-dialog{
-    @include transform(translate3d(0, 100px, 0));
+    transform: translate3d(0, 100px, 0);
   }
 
   &.modal{
@@ -29,13 +29,13 @@
 
     &.fade{
       .modal-dialog{
-        @include transition(transform .3s ease-in-out);
+        transition: transform .3s ease-in-out;
       }
     }
 
     &.in {
       .modal-dialog{
-        @include transform(translate3d(0,0,0));
+        transform: translate3d(0,0,0);
       }
     }
 
@@ -131,20 +131,19 @@
 }
 
 #licenseModal{
-
   overflow-y: scroll !important;
 
   //mobile only btns
   .nav-tabs{
 
       position: fixed;
-      bottom:0;
+      bottom: 0;
       width: 100%;
       z-index: 2;
       background-color: $white;
       display: flex;
       flex-direction: row;
-      margin:0;
+      margin: 0;
       box-shadow: -11px -26px 17px -19px rgba(0, 0, 0, 0.15);
 
       li{
@@ -165,7 +164,7 @@
 
       width: 200px !important;
       top: 50%;
-      @include transform(translateY(-50%));
+      transform: translateY(-50%);
       flex-direction: column;
       left: 0;
       bottom: auto;
@@ -194,18 +193,18 @@
     justify-content: center;
 
     @include breakpoint(desktop){
-        min-height: 83vh;
+      min-height: 83vh;
     }
     @include breakpoint(desktopXL){
       min-height: 90vh;
-      margin-bottom:0;
+      margin-bottom: 0;
     }
 
 
   }
 
   .modal-header{
-    padding:0;
+    padding: 0;
     width: 100%;
     position: absolute;
     top: 0;
@@ -222,9 +221,9 @@
 
   .tab-content{
     visibility: hidden;
-    padding:0;
+    padding: 0;
     opacity: 0;
-    @include transition(opacity .3s);
+    transition: opacity .3s;
 
     @include breakpoint(tablet){
       padding: 0 40px;
@@ -250,13 +249,12 @@
       margin-bottom: 25px;
       list-style: none;
       line-height: 24px;
-      color:#424242;
+      color: #424242;
       font-size: 16px;
 
       li{
         list-style: disc;
         margin-bottom: 15px;
-
       }
     }
 
@@ -404,7 +402,8 @@
 
 .fade{
   opacity: 0;
-  @include transition(opacity .3s ease-in-out);
+  transition: opacity .3s ease-in-out;
+
   &.in{
     opacity: 1;
   }
@@ -423,7 +422,7 @@
 
 .eltdf-sticky-header{
   &.modal-open{
-    @include transform(translateY(-100%) !important);
+    transform: translateY(-100%) !important;
   }
 }
 
@@ -451,7 +450,7 @@
   position: absolute;
   top: 25%;
   left: 46%;
-  @include transform(translateX(-50%)translateY(-50%)translateZ(0));
+  transform: translateX(-50%)translateY(-50%)translateZ(0);
   font-size: 10px;
   margin: 0;
   text-indent: -9999em;
@@ -466,7 +465,7 @@
   background: linear-gradient(to right, #ffffff 10%, rgba(255, 255, 255, 0) 42%);
   -webkit-animation: load3 1.1s infinite linear;
   animation: load3 1.1s infinite linear;
-  @include transition(opacity .2s);
+  transition: opacity .2s;
 }
 .modal-loader:before {
   width: 50%;
@@ -491,16 +490,7 @@
   bottom: 0;
   right: 0;
 }
-@-webkit-keyframes load3 {
-  0% {
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-    transform: rotate(360deg);
-  }
-}
+
 @keyframes load3 {
   0% {
     -webkit-transform: rotate(0deg);

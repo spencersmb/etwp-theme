@@ -101,8 +101,9 @@ $image_size: 350px;
         border-radius: 50%;
         background-color: transparent;
         color: $dark-blue;
-        @include transition( background-color .15s ease-in-out, color .15s ease-in-out);
+        transition: background-color .15s ease-in-out, color .15s ease-in-out;
       }
+
       &:hover{
         a{
           background-color: $blue;
@@ -130,7 +131,7 @@ $image_size: 350px;
 
 .eltdf-plw-tabs .eltdf-plw-tabs-tabs-holder .eltdf-plw-tabs-tab a{
   span{
-    @include transition( color .15s ease-in-out);
+    transition: color .15s ease-in-out;
   }
   &:hover {
     color: $blue !important;

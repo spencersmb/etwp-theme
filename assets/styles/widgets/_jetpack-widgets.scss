@@ -34,7 +34,7 @@
     flex: 1;
     height: 40px;
 
-    @include transition(all .3s);
+    transition: all .3s;
 
     &:focus{
       border-color: $blue;
@@ -53,7 +53,7 @@
     font-size: 12px;
     padding: 10px 15px;
     cursor: pointer;
-    @include transition(all .3s);
+    transition: all .3s;
 
     &:hover{
       background-color: $dark-blue;

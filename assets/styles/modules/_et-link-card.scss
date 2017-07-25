@@ -7,7 +7,7 @@
   a{
     &:hover{
       .et-linkcard__item{
-        @include transform(translate3d(0,-5px,0));
+        transform: translate3d(0,-5px,0);
       }
       h3{
         color: #6b7c93 !important;
@@ -16,8 +16,8 @@
   }
 
   @include e(item){
-    @include transition(all .2s ease-in-out);
-    @include transform(translate3d(0,0,0));
+    transition: all .2s ease-in-out;
+    transform: translate3d(0,0,0);
     position: relative;
     margin: 15px;
     padding: 30px 30px 25px 0;
@@ -35,7 +35,7 @@
     width: 180px;
     position: absolute;
     top: 50%;
-    @include transform(translateY(-50%));
+    transform: translateY(-50%);
     left: -80px;
     z-index: 1;
 
@@ -60,7 +60,7 @@
       font-size: 17px;
       display: flex;
       align-items: center;
-      @include transition (all .3s);
+      transition: all .3s;
     }
     span{
       display: flex;
@@ -69,11 +69,11 @@
       margin-left: 10px;
       line-height: 13px;
       font-size: 13px;
-      top:-1px;
+      top: -1px;
       position: relative;
     }
     p{
-      color:$text-color;
+      color: $text-color;
     }
   }
 }

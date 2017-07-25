@@ -44,40 +44,40 @@ Template: readanddigest
  * Modules
  * ------------------------------------------------------------------------- */
 @import 'modules/navigation';
-//@import 'modules/et-large-search';
-//@import 'modules/slider';
-//@import 'modules/feature-blog';
-//@import 'modules/latest-news';
-//@import 'modules/footer';
-//@import 'modules/card-item';
-//@import 'modules/et-box';
-//@import 'modules/et-box-intro';
-//@import 'modules/et-grid-one';
-//@import 'modules/et-link-card';
-//@import 'modules/et-gallery';
-//@import 'modules/et-bio-cards';
-//@import 'modules/et-ck-forms';
-//@import 'modules/et-flex-list';
-//@import 'modules/modals';
-//@import 'modules/resource-library';
-//
-///* ----------------------------------------------------------------------------
-// * Pages
-// * ------------------------------------------------------------------------- */
-//@import 'products/products-page';
-//@import 'modules/404';
-//
-///* ----------------------------------------------------------------------------
-// * Blog
-// * ------------------------------------------------------------------------- */
-//@import 'blog/post-you-may-like';
-//@import 'blog/home-page';
-//@import 'blog/post-detail';
-//
-///* ----------------------------------------------------------------------------
-// * Widgets
-// * ------------------------------------------------------------------------- */
-//@import "widgets/about-widget";
-//@import "widgets/search-widget";
-//@import "widgets/jetpack-widgets";
-//@import "widgets/text-widget";
+@import 'modules/et-large-search';
+@import 'modules/slider';
+@import 'modules/feature-blog';
+@import 'modules/latest-news';
+@import 'modules/footer';
+@import 'modules/card-item';
+@import 'modules/et-box';
+@import 'modules/et-box-intro';
+@import 'modules/et-grid-one';
+@import 'modules/et-link-card';
+@import 'modules/et-gallery';
+@import 'modules/et-bio-cards';
+@import 'modules/et-ck-forms';
+@import 'modules/et-flex-list';
+@import 'modules/modals';
+@import 'modules/resource-library';
+
+/* ----------------------------------------------------------------------------
+ * Pages
+ * ------------------------------------------------------------------------- */
+@import 'products/products-page';
+@import 'modules/404';
+
+/* ----------------------------------------------------------------------------
+ * Blog
+ * ------------------------------------------------------------------------- */
+@import 'blog/post-you-may-like';
+@import 'blog/home-page';
+@import 'blog/post-detail';
+
+/* ----------------------------------------------------------------------------
+ * Widgets
+ * ------------------------------------------------------------------------- */
+@import "widgets/about-widget";
+@import "widgets/search-widget";
+@import "widgets/jetpack-widgets";
+@import "widgets/text-widget";

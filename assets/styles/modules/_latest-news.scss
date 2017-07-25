@@ -4,6 +4,7 @@
 
 .et-latest-news {
   padding: 60px 0 60px;
+
   @include breakpoint(desktop){
     padding: 60px 0 120px;
   }
@@ -18,7 +19,6 @@
   }
 
   .eltdf-bnl-holder .eltdf-bnl-outer .eltdf-bnl-inner{
-    //margin-bottom: -98px;
     position: relative;
     display: table;
   }
@@ -53,13 +53,13 @@
       position: absolute;
       top: 50%;
       left: 50%;
-      @include transform(translateX(-50%)translateY(-50%));
+      transform: translateX(-50%)translateY(-50%);
 
       @include breakpoint(tabletmax){
         position: relative;
         top: 0;
         left: 0;
-        @include transform(translateX(0)translateY(0));
+        transform: translateX(0)translateY(0);
       }
     }
 
@@ -124,11 +124,10 @@
         }
 
         .eltdf-pt-one-title{
-
           display: block;
           position: absolute;
           top:50%;
-          @include transform(translateY(-50%));
+          transform: translateY(-50%);
           left:115px;
           font-size: 18px;
           line-height: 24px;
@@ -138,7 +137,7 @@
             left:0;
             position: relative;
             top:0;
-            @include transform(translateY(0));
+            transform: translateY(0);
             font-size: 24px;
             max-width: 100%;
           }
@@ -151,7 +150,7 @@
             font-weight: 500;
             line-height: 24px;
             top: 0;
-            @include transform(translateY(0));
+            transform: translateY(0);
           }
 
         }

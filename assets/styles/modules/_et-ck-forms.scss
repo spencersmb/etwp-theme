@@ -52,7 +52,7 @@
     z-index: 1000;
     display: none;
     top: 50%!important;
-    @include transform(translateY(-50%)translateX(-50%));
+    transform: translateY(-50%)translateX(-50%);
     background: #fff;
     width: 100%;
     margin: 0 !important;
@@ -270,8 +270,8 @@
   overflow: hidden;
   padding: 0 1.5em;
 
-  @include transform(translate3d(0, 2.5em, 0));
-  @include transition(all .25s ease-in-out);
+  transform: translate3d(0, 2.5em, 0);
+  transition: all .25s ease-in-out;
 
 }
 
@@ -279,7 +279,7 @@
   color: #8B8C8B;
   padding: 0.25em 0;
 
-  @include transition(transform .25s ease-in-out);
+  transition: transform .25s ease-in-out;
 
 }
 
@@ -348,12 +348,12 @@
 
 .input__field--yoshiko:focus + .input__label--yoshiko,
 .input--filled .input__label--yoshiko {
-  @include transform(translate3d(0, 0, 0));
+  transform: translate3d(0, 0, 0);
 }
 
 .input__field--yoshiko:focus + .input__label--yoshiko .input__label-content--yoshiko,
 .input--filled .input__label-content--yoshiko {
-  @include transform(translate3d(0, 100%, 0));
+  transform: translate3d(0, 100%, 0);
 }
 
 .input__field--yoshiko:focus + .input__field--yoshiko,
@@ -366,30 +366,30 @@
   //beginning of animation
 
   0% {
-    @include transform(rotate(-15deg) translate3d(45px, -30px, 0));
+    transform: rotate(-15deg) translate3d(45px, -30px, 0);
   }
 
   50% {
-    @include transform(rotate(-30deg) translate3d(-134px, -72px, 0));
+    transform: rotate(-30deg) translate3d(-134px, -72px, 0);
   }
 
   100%{
-    @include transform(rotate(-15deg) translate3d(45px, -30px, 0));
+    transform: rotate(-15deg) translate3d(45px, -30px, 0);
   }
 }
 
 @keyframes animate-out-form {
   //beginning of animation
   0% {
-    @include transform(rotate(0deg) translate3d(0px, 0px, 0));
+    transform: rotate(0deg) translate3d(0px, 0px, 0);
   }
 
   50% {
-    @include transform(rotate(-30deg) translate3d(-134px, -72px, 0));
+    transform: rotate(-30deg) translate3d(-134px, -72px, 0);
   }
 
   100%{
-    @include transform(rotate(0deg) translate3d(0px, 0px, 0));
+    transform: rotate(0deg) translate3d(0px, 0px, 0);
   }
 }
 .et2017__contact{
@@ -424,9 +424,9 @@
     border-radius: 10px;
     padding: 30px 0;
     z-index: 1;
-    @include transform(rotate(0deg) translate3d(0px, 0px, 0));
-    @include transform-origin(center bottom);
-    @include transition( all .3s ease-in-out);
+    transform: rotate(0deg) translate3d(0px, 0px, 0);
+    transform-origin: center bottom;
+    transition: all .3s ease-in-out;
 
     &.form-animate-out{
       animation-duration:.8s;
@@ -443,7 +443,7 @@
     margin-top:30px;
     padding: 16px 33px;
     font-size: 16px;
-    @include transition(color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out);
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
   }
 
   .wpcf7-form-control.wpcf7-text, .wpcf7-form-control.wpcf7-number, .wpcf7-form-control.wpcf7-date, .wpcf7-form-control.wpcf7-textarea, .wpcf7-form-control.wpcf7-select, .wpcf7-form-control.wpcf7-quiz, #respond textarea, #respond input[type='text'], .post-password-form input[type='password']{
@@ -507,21 +507,21 @@
   .et2017-contact__svg{
     position: absolute;
     top: 0;
-    left:0;
+    left: 0;
     z-index: 1;
-    @include transform-origin(center top);
-    @include transition( all .3s ease-in-out);
-    width:600px;
-    @include transform(rotate(-15deg) translate3d(45px, -130px, 0));
+    transform-origin: center top;
+    transition: all .3s ease-in-out;
+    width: 600px;
+    transform: rotate(-15deg) translate3d(45px, -130px, 0);
 
     @include breakpoint(rd-desktop-max){
-      width:400px;
-      @include transform(rotate(-15deg) translate3d(10%, -130px, 0));
+      width: 400px;
+      transform: rotate(-15deg) translate3d(10%, -130px, 0);
     }
 
     @include breakpoint(rd-tablet-max){
       width: 300px;
-      @include transform(rotate(-15deg) translate3d(15%, -150px, 0));
+      transform: rotate(-15deg) translate3d(15%, -150px, 0);
     }
 
     @include breakpoint(rd-mobile-h-max){
@@ -551,26 +551,26 @@
     top: 0;
     z-index: 3;
     width:500px;
-    @include transform(translate3d(624px, -100px, 0) rotate(9deg));
+    transform: translate3d(624px, -100px, 0) rotate(9deg);
 
     @include breakpoint(rd-desktop-max){
       width: 450px;
-      @include transform(translate3d(90%, -150px, 0) rotate(9deg));
+      transform: translate3d(90%, -150px, 0) rotate(9deg);
     }
 
     @include breakpoint(rd-laptop-max){
       width: 350px;
-      @include transform(translate3d(425px, -150px, 0) rotate(9deg));
+      transform: translate3d(425px, -150px, 0) rotate(9deg);
     }
 
     @include breakpoint(rd-tablet-max){
       width: 300px;
-      @include transform(translate3d(325px, -80%, 0) rotate(9deg));
+      transform: translate3d(325px, -80%, 0) rotate(9deg);
     }
 
     @include breakpoint(rd-mobile-h-max){
       width: 250px;
-      @include transform(translate3d(-20px, -80%, 0) rotate(-9deg));
+      transform: translate3d(-20px, -80%, 0) rotate(-9deg);
     }
 
     .et2017-text-svg{

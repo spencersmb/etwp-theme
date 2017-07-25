@@ -46,8 +46,6 @@
 }
 
 .et2017-post{
-  //border-bottom: 1px solid $grey;
-  //border-length: 20px;
   margin-bottom: 0;
 
   .eltdf-pt-six-image-holder{
@@ -228,7 +226,7 @@
       top: 0;
       padding: 3px;
       border-radius: 50%;
-      @include transition(all .3s);
+      transition: all .3s;
     }
 
   }
@@ -238,7 +236,7 @@
     bottom: -22.5px;
     right: auto;
     left: 50%;
-    @include transform(translateX(-50%));
+    transform: translateX(-50%);
 
     a{
       padding: 16px 66px 16px 33px;
@@ -246,7 +244,7 @@
       border-radius: 25px;
       color: $white;
       font-weight: 600;
-      @include transition(all .3s);
+      transition: all .3s;
 
       &:hover{
         background-color: $dark-blue;
@@ -258,7 +256,7 @@
         line-height: 1;
         position: absolute;
         top: 35%;
-        @include transform(translateY(-50%));
+        transform: translateY(-50%);
       }
 
     }
