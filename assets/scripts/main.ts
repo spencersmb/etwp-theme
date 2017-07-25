@@ -39,7 +39,6 @@ import Products from './routes/Products'
 
   let bootstrap = new EtApp();
 
-  // use window.load for now - dev site loads too fast and doc.ready doesnt work - but it works when not in dev env
   $(window).load(function () {
     console.log('Doc loaded');
     bootstrap.init();
