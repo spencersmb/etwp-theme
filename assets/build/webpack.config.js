@@ -190,6 +190,10 @@ if (config.env.production) {
   webpackConfig.plugins.push(new webpack.NoEmitOnErrorsPlugin())
 }
 
+if (config.env.production) {
+  webpackConfig.module.rules.push(stripLoader);
+}
+
 if (config.enabled.cacheBusting) {
   const WebpackAssetsManifest = require('webpack-assets-manifest')
 
